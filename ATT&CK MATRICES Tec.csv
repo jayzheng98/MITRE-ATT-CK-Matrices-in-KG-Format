@@ -1,0 +1,190 @@
+Name,ID,Sub-Tec,Tactic,Platforms,Data Sources,Permissions Required
+Drive-by Compromise,T1189,No sub-techniques,InitialAccess,"Linux, SaaS, Windows, macOS","Network device logs, Network intrusion detection system, Packet capture, Process use of network, SSL/TLS inspection, Web proxy",User
+Exploit Public-Facing Application,T1190,No sub-techniques,InitialAccess,"AWS, Azure, GCP, Linux, Network, Windows, macOS","AWS CloudTrail logs, Application logs, Azure activity logs, Packet capture, Stackdriver logs, Web application firewall logs, Web logs",[]
+External Remote Services,T1133,No sub-techniques,"Persistence,InitialAccess","Linux, Windows",Authentication logs,User
+Hardware Additions,T1200,No sub-techniques,InitialAccess,"Linux, Windows, macOS","Asset management, Data loss prevention",[]
+Phishing,T1566,3 sub-techniques,InitialAccess,"Linux, Office 365, SaaS, Windows, macOS","Anti-virus, Detonation chamber, Email gateway, File monitoring, Mail server, Network intrusion detection system, Packet capture, SSL/TLS inspection, Web proxy",[]
+Replication Through Removable Media,T1091,No sub-techniques,"LateralMovement,InitialAccess",Windows,"Data loss prevention, File monitoring",User
+Supply Chain Compromise,T1195,3 sub-techniques,InitialAccess,"Linux, Windows, macOS","File monitoring, Web proxy",[]
+Trusted Relationship,T1199,No sub-techniques,InitialAccess,"AWS, Azure, GCP, Linux, SaaS, Windows, macOS","AWS CloudTrail logs, Application logs, Authentication logs, Azure activity logs, Stackdriver logs, Third-party application logs",[]
+Valid Accounts,T1078,4 sub-techniques,"DefenseEvasion,Persistence,PrivilegeEscalation,InitialAccess","AWS, Azure, Azure AD, GCP, Linux, Office 365, SaaS, Windows, macOS","AWS CloudTrail logs, Authentication logs, Process monitoring, Stackdriver logs","Administrator, User"
+Command and Scripting Interpreter,T1059,8 sub-techniques,Execution,"Linux, Network, Windows, macOS","PowerShell logs, Process command-line parameters, Process monitoring, Windows event logs",User
+Exploitation for Client Execution,T1203,No sub-techniques,Execution,"Linux, Windows, macOS","Anti-virus, Process monitoring, System calls",[]
+Inter-Process Communication,T1559,2 sub-techniques,Execution,Windows,"DLL monitoring, File monitoring, Process monitoring","Administrator, SYSTEM, User"
+Native API,T1106,No sub-techniques,Execution,"Linux, Windows, macOS","API monitoring, Loaded DLLs, Process monitoring, System calls",User
+Scheduled Task/Job,T1053,6 sub-techniques,"Execution,Persistence,PrivilegeEscalation","Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring, Windows event logs","Administrator, SYSTEM, User"
+Shared Modules,T1129,No sub-techniques,Execution,Windows,"API monitoring, DLL monitoring, File monitoring, Process monitoring",User
+Software Deployment Tools,T1072,No sub-techniques,"Execution,LateralMovement","Linux, Windows, macOS","Authentication logs, Binary file metadata, File monitoring, Process monitoring, Process use of network, Third-party application logs, Windows Registry","Administrator, SYSTEM, User"
+System Services,T1569,2 sub-techniques,Execution,"Windows, macOS","File monitoring, Process command-line parameters, Process monitoring, Windows Registry","Administrator, SYSTEM, User, root"
+User Execution,T1204,2 sub-techniques,Execution,"Linux, Windows, macOS","Anti-virus, Process command-line parameters, Process monitoring",User
+Windows Management Instrumentation,T1047,No sub-techniques,Execution,Windows,"Authentication logs, Netflow/Enclave netflow, Process command-line parameters, Process monitoring","Administrator, User"
+Account Manipulation,T1098,4 sub-techniques,Persistence,"AWS, Azure, Azure AD, GCP, Linux, Office 365, Windows, macOS","Authentication logs, Windows event logs",[]
+BITS Jobs,T1197,No sub-techniques,"DefenseEvasion,Persistence",Windows,"Packet capture, Process command-line parameters, Process monitoring, Windows event logs","Administrator, SYSTEM, User"
+Boot or Logon Autostart Execution,T1547,12 sub-techniques,"Persistence,PrivilegeEscalation","Linux, Windows, macOS",[],"Administrator, User, root"
+Boot or Logon Initialization Scripts,T1037,5 sub-techniques,"Persistence,PrivilegeEscalation","Linux, Windows, macOS","File monitoring, Process monitoring",[]
+Browser Extensions,T1176,No sub-techniques,Persistence,"Linux, Windows, macOS","Browser extensions, File monitoring, Process monitoring, Process use of network, Windows Registry",User
+Compromise Client Software Binary,T1554,No sub-techniques,Persistence,"Linux, Windows, macOS","Binary file metadata, Process monitoring",[]
+Create Account,T1136,3 sub-techniques,Persistence,"AWS, Azure, Azure AD, GCP, Linux, Office 365, Windows, macOS","AWS CloudTrail logs, Authentication logs, Azure activity logs, Office 365 account logs, Process command-line parameters, Process monitoring, Windows event logs",Administrator
+Create or Modify System Process,T1543,4 sub-techniques,"Persistence,PrivilegeEscalation","Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring, Windows Registry, Windows event logs",[]
+Event Triggered Execution,T1546,15 sub-techniques,"PrivilegeEscalation,Persistence","Linux, Windows, macOS","API monitoring, Binary file metadata, DLL monitoring, File monitoring, Loaded DLLs, Process command-line parameters, Process monitoring, Process use of network, System calls, WMI Objects, Windows Registry, Windows event logs",[]
+External Remote Services,T1133,No sub-techniques,"Persistence,InitialAccess","Linux, Windows",Authentication logs,User
+Hijack Execution Flow,T1574,11 sub-techniques,"Persistence,PrivilegeEscalation,DefenseEvasion","Linux, Windows, macOS","DLL monitoring, Environment variable, File monitoring, Loaded DLLs, Process command-line parameters, Process monitoring",[]
+Implant Container Image,T1525,No sub-techniques,Persistence,"AWS, Azure, GCP","Asset management, File monitoring",User
+Office Application Startup,T1137,6 sub-techniques,Persistence,"Office 365, Windows","File monitoring, Mail server, Process command-line parameters, Process monitoring, Windows Registry","Administrator, User"
+Pre-OS Boot,T1542,5 sub-techniques,"DefenseEvasion,Persistence","Linux, Network, Windows","API monitoring, BIOS, Component firmware, Disk forensics, EFI, MBR, Process monitoring, VBR","Administrator, SYSTEM"
+Scheduled Task/Job,T1053,6 sub-techniques,"Execution,Persistence,PrivilegeEscalation","Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring, Windows event logs","Administrator, SYSTEM, User"
+Server Software Component,T1505,3 sub-techniques,Persistence,"Linux, Windows, macOS","Application logs, File monitoring, Netflow/Enclave netflow, Process monitoring","Administrator, SYSTEM, root"
+Traffic Signaling,T1205,1 sub-techniques,"DefenseEvasion,Persistence,CommandAndControl","Linux, Network, Windows, macOS","Netflow/Enclave netflow, Packet capture",User
+Valid Accounts,T1078,4 sub-techniques,"DefenseEvasion,Persistence,PrivilegeEscalation,InitialAccess","AWS, Azure, Azure AD, GCP, Linux, Office 365, SaaS, Windows, macOS","AWS CloudTrail logs, Authentication logs, Process monitoring, Stackdriver logs","Administrator, User"
+Abuse Elevation Control Mechanism,T1548,4 sub-techniques,"PrivilegeEscalation,DefenseEvasion","Linux, Windows, macOS","API monitoring, File monitoring, Process command-line parameters, Process monitoring, Windows Registry","Administrator, User"
+Access Token Manipulation,T1134,5 sub-techniques,"DefenseEvasion,PrivilegeEscalation",Windows,"API monitoring, Access tokens, Authentication logs, Process command-line parameters, Process monitoring, Windows event logs","Administrator, User"
+Boot or Logon Autostart Execution,T1547,12 sub-techniques,"Persistence,PrivilegeEscalation","Linux, Windows, macOS",[],"Administrator, User, root"
+Boot or Logon Initialization Scripts,T1037,5 sub-techniques,"Persistence,PrivilegeEscalation","Linux, Windows, macOS","File monitoring, Process monitoring",[]
+Create or Modify System Process,T1543,4 sub-techniques,"Persistence,PrivilegeEscalation","Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring, Windows Registry, Windows event logs",[]
+Event Triggered Execution,T1546,15 sub-techniques,"PrivilegeEscalation,Persistence","Linux, Windows, macOS","API monitoring, Binary file metadata, DLL monitoring, File monitoring, Loaded DLLs, Process command-line parameters, Process monitoring, Process use of network, System calls, WMI Objects, Windows Registry, Windows event logs",[]
+Exploitation for Privilege Escalation,T1068,No sub-techniques,PrivilegeEscalation,"Linux, Windows, macOS","Application logs, Process monitoring, Windows Error Reporting",User
+Group Policy Modification,T1484,No sub-techniques,"DefenseEvasion,PrivilegeEscalation",Windows,Windows event logs,"Administrator, User"
+Hijack Execution Flow,T1574,11 sub-techniques,"Persistence,PrivilegeEscalation,DefenseEvasion","Linux, Windows, macOS","DLL monitoring, Environment variable, File monitoring, Loaded DLLs, Process command-line parameters, Process monitoring",[]
+Process Injection,T1055,11 sub-techniques,"DefenseEvasion,PrivilegeEscalation","Linux, Windows, macOS","API monitoring, DLL monitoring, File monitoring, Named Pipes, Process monitoring",[]
+Scheduled Task/Job,T1053,6 sub-techniques,"Execution,Persistence,PrivilegeEscalation","Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring, Windows event logs","Administrator, SYSTEM, User"
+Valid Accounts,T1078,4 sub-techniques,"DefenseEvasion,Persistence,PrivilegeEscalation,InitialAccess","AWS, Azure, Azure AD, GCP, Linux, Office 365, SaaS, Windows, macOS","AWS CloudTrail logs, Authentication logs, Process monitoring, Stackdriver logs","Administrator, User"
+Abuse Elevation Control Mechanism,T1548,4 sub-techniques,"PrivilegeEscalation,DefenseEvasion","Linux, Windows, macOS","API monitoring, File monitoring, Process command-line parameters, Process monitoring, Windows Registry","Administrator, User"
+Access Token Manipulation,T1134,5 sub-techniques,"DefenseEvasion,PrivilegeEscalation",Windows,"API monitoring, Access tokens, Authentication logs, Process command-line parameters, Process monitoring, Windows event logs","Administrator, User"
+BITS Jobs,T1197,No sub-techniques,"DefenseEvasion,Persistence",Windows,"Packet capture, Process command-line parameters, Process monitoring, Windows event logs","Administrator, SYSTEM, User"
+Deobfuscate/Decode Files or Information,T1140,No sub-techniques,DefenseEvasion,"Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring",User
+Direct Volume Access,T1006,No sub-techniques,DefenseEvasion,Windows,API monitoring,Administrator
+Execution Guardrails,T1480,1 sub-techniques,DefenseEvasion,"Linux, Windows, macOS",Process monitoring,User
+Exploitation for Defense Evasion,T1211,No sub-techniques,DefenseEvasion,"Linux, Windows, macOS","File monitoring, Process monitoring, Windows Error Reporting",User
+File and Directory Permissions Modification,T1222,2 sub-techniques,DefenseEvasion,"Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring, Windows event logs","Administrator, SYSTEM, User, root"
+Group Policy Modification,T1484,No sub-techniques,"DefenseEvasion,PrivilegeEscalation",Windows,Windows event logs,"Administrator, User"
+Hide Artifacts,T1564,7 sub-techniques,DefenseEvasion,"Linux, Windows, macOS","API monitoring, Authentication logs, File monitoring, PowerShell logs, Process command-line parameters, Process monitoring",[]
+Hijack Execution Flow,T1574,11 sub-techniques,"Persistence,PrivilegeEscalation,DefenseEvasion","Linux, Windows, macOS","DLL monitoring, Environment variable, File monitoring, Loaded DLLs, Process command-line parameters, Process monitoring",[]
+Impair Defenses,T1562,7 sub-techniques,DefenseEvasion,"AWS, Azure, GCP, Linux, Windows, macOS","API monitoring, AWS CloudTrail logs, Anti-virus, Authentication logs, Azure activity logs, Environment variable, File monitoring, GCP audit logs, Process command-line parameters, Process monitoring, Services, Windows Registry","Administrator, User"
+Indicator Removal on Host,T1070,6 sub-techniques,DefenseEvasion,"Linux, Windows, macOS","API monitoring, File monitoring, Process command-line parameters, Process monitoring, Windows event logs",[]
+Indirect Command Execution,T1202,No sub-techniques,DefenseEvasion,Windows,"File monitoring, Process command-line parameters, Process monitoring, Windows event logs",User
+Masquerading,T1036,6 sub-techniques,DefenseEvasion,"Linux, Windows, macOS","Binary file metadata, File monitoring, Process command-line parameters, Process monitoring",[]
+Modify Authentication Process,T1556,4 sub-techniques,"CredentialAccess,DefenseEvasion","Linux, Network, Windows, macOS","API monitoring, Authentication logs, DLL monitoring, File monitoring, Process monitoring, Windows Registry",[]
+Modify Cloud Compute Infrastructure,T1578,4 sub-techniques,DefenseEvasion,"AWS, Azure, GCP","AWS CloudTrail logs, Azure activity logs, GCP audit logs, Stackdriver logs",User
+Modify Registry,T1112,No sub-techniques,DefenseEvasion,Windows,"File monitoring, Process command-line parameters, Process monitoring, Windows Registry, Windows event logs","Administrator, SYSTEM, User"
+Modify System Image,T1601,2 sub-techniques,DefenseEvasion,Network,"File monitoring, Network device configuration, Network device run-time memory",Administrator
+Network Boundary Bridging,T1599,1 sub-techniques,DefenseEvasion,Network,"Netflow/Enclave netflow, Packet capture",Administrator
+Obfuscated Files or Information,T1027,5 sub-techniques,DefenseEvasion,"Linux, Windows, macOS","Binary file metadata, Email gateway, Environment variable, File monitoring, Malware reverse engineering, Network intrusion detection system, Network protocol analysis, Process command-line parameters, Process monitoring, Process use of network, SSL/TLS inspection, Windows event logs",[]
+Pre-OS Boot,T1542,5 sub-techniques,"DefenseEvasion,Persistence","Linux, Network, Windows","API monitoring, BIOS, Component firmware, Disk forensics, EFI, MBR, Process monitoring, VBR","Administrator, SYSTEM"
+Process Injection,T1055,11 sub-techniques,"DefenseEvasion,PrivilegeEscalation","Linux, Windows, macOS","API monitoring, DLL monitoring, File monitoring, Named Pipes, Process monitoring",[]
+Rogue Domain Controller,T1207,No sub-techniques,DefenseEvasion,Windows,"API monitoring, Authentication logs, Network protocol analysis, Packet capture",Administrator
+Rootkit,T1014,No sub-techniques,DefenseEvasion,"Linux, Windows, macOS","BIOS, MBR, System calls","Administrator, SYSTEM, root"
+Signed Binary Proxy Execution,T1218,11 sub-techniques,DefenseEvasion,Windows,"API monitoring, Binary file metadata, DLL monitoring, File monitoring, Loaded DLLs, Process command-line parameters, Process monitoring, Process use of network, Windows Registry","Administrator, User"
+Signed Script Proxy Execution,T1216,1 sub-techniques,DefenseEvasion,Windows,"Process command-line parameters, Process monitoring",User
+Subvert Trust Controls,T1553,4 sub-techniques,DefenseEvasion,"Linux, Windows, macOS","API monitoring, Application logs, Binary file metadata, DLL monitoring, File monitoring, Loaded DLLs, Process command-line parameters, Process monitoring, Windows Registry, Windows event logs",[]
+Template Injection,T1221,No sub-techniques,DefenseEvasion,Windows,"Anti-virus, Email gateway, Network intrusion detection system, Web logs",User
+Traffic Signaling,T1205,1 sub-techniques,"DefenseEvasion,Persistence,CommandAndControl","Linux, Network, Windows, macOS","Netflow/Enclave netflow, Packet capture",User
+Trusted Developer Utilities Proxy Execution,T1127,1 sub-techniques,DefenseEvasion,Windows,"File monitoring, Process monitoring",User
+Unused/Unsupported Cloud Regions,T1535,No sub-techniques,DefenseEvasion,"AWS, Azure, GCP","AWS CloudTrail logs, Azure activity logs, Stackdriver logs",User
+Use Alternate Authentication Material,T1550,4 sub-techniques,"DefenseEvasion,LateralMovement","Office 365, SaaS, Windows","Authentication logs, OAuth audit logs, Office 365 audit logs",[]
+Valid Accounts,T1078,4 sub-techniques,"DefenseEvasion,Persistence,PrivilegeEscalation,InitialAccess","AWS, Azure, Azure AD, GCP, Linux, Office 365, SaaS, Windows, macOS","AWS CloudTrail logs, Authentication logs, Process monitoring, Stackdriver logs","Administrator, User"
+Virtualization/Sandbox Evasion,T1497,3 sub-techniques,"DefenseEvasion,Discovery","Linux, Windows, macOS","Process command-line parameters, Process monitoring",[]
+Weaken Encryption,T1600,2 sub-techniques,DefenseEvasion,Network,File monitoring,Administrator
+XSL Script Processing,T1220,No sub-techniques,DefenseEvasion,Windows,"DLL monitoring, Process command-line parameters, Process monitoring, Process use of network",User
+Brute Force,T1110,4 sub-techniques,CredentialAccess,"AWS, Azure, Azure AD, GCP, Linux, Office 365, SaaS, Windows, macOS","Authentication logs, Office 365 account logs",User
+Credentials from Password Stores,T1555,3 sub-techniques,CredentialAccess,"Linux, Windows, macOS","API monitoring, File monitoring, PowerShell logs, Process monitoring, System calls",Administrator
+Exploitation for Credential Access,T1212,No sub-techniques,CredentialAccess,"Linux, Windows, macOS","Authentication logs, Process monitoring, Windows Error Reporting",User
+Forced Authentication,T1187,No sub-techniques,CredentialAccess,Windows,"File monitoring, Network device logs, Network protocol analysis, Process use of network",User
+Input Capture,T1056,4 sub-techniques,"Collection,CredentialAccess","Linux, Network, Windows, macOS","API monitoring, Binary file metadata, DLL monitoring, Kernel drivers, Loaded DLLs, PowerShell logs, Process command-line parameters, Process monitoring, User interface, Windows Registry, Windows event logs","Administrator, SYSTEM, User, root"
+Man-in-the-Middle,T1557,2 sub-techniques,"CredentialAccess,Collection","Linux, Windows, macOS","File monitoring, Netflow/Enclave netflow, Packet capture",User
+Modify Authentication Process,T1556,4 sub-techniques,"CredentialAccess,DefenseEvasion","Linux, Network, Windows, macOS","API monitoring, Authentication logs, DLL monitoring, File monitoring, Process monitoring, Windows Registry",[]
+Network Sniffing,T1040,No sub-techniques,"CredentialAccess,Discovery","Linux, Windows, macOS","Host network interface, Netflow/Enclave netflow, Network device logs, Process monitoring","Administrator, SYSTEM"
+OS Credential Dumping,T1003,8 sub-techniques,CredentialAccess,"Linux, Windows, macOS","API monitoring, PowerShell logs, Process command-line parameters, Process monitoring","Administrator, SYSTEM, root"
+Steal Application Access Token,T1528,No sub-techniques,CredentialAccess,"Azure AD, Office 365, SaaS","Azure activity logs, OAuth audit logs",User
+Steal or Forge Kerberos Tickets,T1558,4 sub-techniques,CredentialAccess,Windows,"Authentication logs, Windows event logs",[]
+Steal Web Session Cookie,T1539,No sub-techniques,CredentialAccess,"Linux, Office 365, SaaS, Windows, macOS","API monitoring, File monitoring",User
+Two-Factor Authentication Interception,T1111,No sub-techniques,CredentialAccess,"Linux, Windows, macOS","API monitoring, Kernel drivers, Process monitoring","Administrator, SYSTEM"
+Unsecured Credentials,T1552,6 sub-techniques,CredentialAccess,"AWS, Azure, Azure AD, GCP, Linux, Office 365, SaaS, Windows, macOS","AWS CloudTrail logs, Authentication logs, Azure activity logs, File monitoring, Process command-line parameters, Process monitoring, Windows Registry, Windows event logs","Administrator, SYSTEM, User"
+Account Discovery,T1087,4 sub-techniques,Discovery,"AWS, Azure, Azure AD, GCP, Linux, Office 365, SaaS, Windows, macOS","API monitoring, Azure activity logs, Office 365 account logs, Process command-line parameters, Process monitoring",User
+Application Window Discovery,T1010,No sub-techniques,Discovery,"Windows, macOS","API monitoring, Process command-line parameters, Process monitoring",User
+Browser Bookmark Discovery,T1217,No sub-techniques,Discovery,"Linux, Windows, macOS","API monitoring, File monitoring, Process command-line parameters, Process monitoring",User
+Cloud Infrastructure Discovery,T1580,No sub-techniques,Discovery,"AWS, Azure, GCP","AWS CloudTrail logs, Azure activity logs, GCP audit logs, Stackdriver logs",User
+Cloud Service Dashboard,T1538,No sub-techniques,Discovery,"AWS, Azure, Azure AD, GCP, Office 365","AWS CloudTrail logs, Azure activity logs, Office 365 audit logs, Stackdriver logs",User
+Cloud Service Discovery,T1526,No sub-techniques,Discovery,"AWS, Azure, Azure AD, GCP, Office 365, SaaS","AWS CloudTrail logs, Azure activity logs, Stackdriver logs",User
+Domain Trust Discovery,T1482,No sub-techniques,Discovery,Windows,"API monitoring, PowerShell logs, Process command-line parameters, Process monitoring",User
+File and Directory Discovery,T1083,No sub-techniques,Discovery,"Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring","Administrator, SYSTEM, User"
+Network Service Scanning,T1046,No sub-techniques,Discovery,"AWS, Azure, GCP, Linux, Windows, macOS","Netflow/Enclave netflow, Network protocol analysis, Packet capture, Process command-line parameters, Process use of network","Administrator, SYSTEM, User"
+Network Share Discovery,T1135,No sub-techniques,Discovery,"Linux, Windows, macOS","Network protocol analysis, Process command-line parameters, Process monitoring, Process use of network",User
+Network Sniffing,T1040,No sub-techniques,"CredentialAccess,Discovery","Linux, Windows, macOS","Host network interface, Netflow/Enclave netflow, Network device logs, Process monitoring","Administrator, SYSTEM"
+Password Policy Discovery,T1201,No sub-techniques,Discovery,"Linux, Windows, macOS","Process command-line parameters, Process monitoring",User
+Peripheral Device Discovery,T1120,No sub-techniques,Discovery,"Windows, macOS","API monitoring, PowerShell logs, Process command-line parameters, Process monitoring","Administrator, SYSTEM, User"
+Permission Groups Discovery,T1069,3 sub-techniques,Discovery,"AWS, Azure, Azure AD, GCP, Linux, Office 365, SaaS, Windows, macOS","API monitoring, AWS CloudTrail logs, Azure activity logs, GCP audit logs, Office 365 account logs, Process command-line parameters, Process monitoring, Stackdriver logs",User
+Process Discovery,T1057,No sub-techniques,Discovery,"Linux, Windows, macOS","API monitoring, Process command-line parameters, Process monitoring","Administrator, SYSTEM, User"
+Query Registry,T1012,No sub-techniques,Discovery,Windows,"Process command-line parameters, Process monitoring, Windows Registry","Administrator, SYSTEM, User"
+Remote System Discovery,T1018,No sub-techniques,Discovery,"Linux, Windows, macOS","Network protocol analysis, Process command-line parameters, Process monitoring, Process use of network","Administrator, SYSTEM, User"
+Software Discovery,T1518,1 sub-techniques,Discovery,"AWS, Azure, Azure AD, GCP, Linux, Office 365, SaaS, Windows, macOS","AWS CloudTrail logs, Azure activity logs, File monitoring, Process command-line parameters, Process monitoring, Stackdriver logs","Administrator, User"
+System Information Discovery,T1082,No sub-techniques,Discovery,"AWS, Azure, GCP, Linux, Windows, macOS","AWS CloudTrail logs, Azure activity logs, Process command-line parameters, Process monitoring, Stackdriver logs",User
+System Network Configuration Discovery,T1016,No sub-techniques,Discovery,"Linux, Windows, macOS","Process command-line parameters, Process monitoring",User
+System Network Connections Discovery,T1049,No sub-techniques,Discovery,"AWS, Azure, GCP, Linux, Windows, macOS","Process command-line parameters, Process monitoring","Administrator, User"
+System Owner/User Discovery,T1033,No sub-techniques,Discovery,"Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring","Administrator, User"
+System Service Discovery,T1007,No sub-techniques,Discovery,Windows,"Process command-line parameters, Process monitoring","Administrator, SYSTEM, User"
+System Time Discovery,T1124,No sub-techniques,Discovery,Windows,"API monitoring, Process command-line parameters, Process monitoring",User
+Virtualization/Sandbox Evasion,T1497,3 sub-techniques,"DefenseEvasion,Discovery","Linux, Windows, macOS","Process command-line parameters, Process monitoring",[]
+Exploitation of Remote Services,T1210,No sub-techniques,LateralMovement,"Linux, Windows, macOS","File monitoring, Process monitoring, Windows Error Reporting",User
+Internal Spearphishing,T1534,No sub-techniques,LateralMovement,"Linux, Office 365, SaaS, Windows, macOS","Anti-virus, DNS records, File monitoring, Mail server, Office 365 trace logs, SSL/TLS inspection, Web proxy",User
+Lateral Tool Transfer,T1570,No sub-techniques,LateralMovement,"Linux, Windows, macOS","File monitoring, Netflow/Enclave netflow, Network protocol analysis, Packet capture, Process command-line parameters, Process monitoring, Process use of network",User
+Remote Service Session Hijacking,T1563,2 sub-techniques,LateralMovement,"Linux, Windows, macOS","Authentication logs, Netflow/Enclave netflow, Process command-line parameters, Process monitoring","SYSTEM, root"
+Remote Services,T1021,6 sub-techniques,LateralMovement,"Linux, Windows, macOS","API monitoring, Authentication logs, DLL monitoring, File monitoring, Netflow/Enclave netflow, Network protocol analysis, Packet capture, PowerShell logs, Process command-line parameters, Process monitoring, Process use of network, Windows Registry, Windows event logs",[]
+Replication Through Removable Media,T1091,No sub-techniques,"LateralMovement,InitialAccess",Windows,"Data loss prevention, File monitoring",User
+Software Deployment Tools,T1072,No sub-techniques,"Execution,LateralMovement","Linux, Windows, macOS","Authentication logs, Binary file metadata, File monitoring, Process monitoring, Process use of network, Third-party application logs, Windows Registry","Administrator, SYSTEM, User"
+Taint Shared Content,T1080,No sub-techniques,LateralMovement,Windows,"File monitoring, Process monitoring",User
+Use Alternate Authentication Material,T1550,4 sub-techniques,"DefenseEvasion,LateralMovement","Office 365, SaaS, Windows","Authentication logs, OAuth audit logs, Office 365 audit logs",[]
+Archive Collected Data,T1560,3 sub-techniques,Collection,"Linux, Windows, macOS","Binary file metadata, File monitoring, Process command-line parameters, Process monitoring",[]
+Audio Capture,T1123,No sub-techniques,Collection,"Linux, Windows, macOS","API monitoring, File monitoring, Process monitoring",User
+Automated Collection,T1119,No sub-techniques,Collection,"Linux, Windows, macOS","Data loss prevention, File monitoring, Process command-line parameters",User
+Clipboard Data,T1115,No sub-techniques,Collection,"Linux, Windows, macOS",API monitoring,[]
+Data from Cloud Storage Object,T1530,No sub-techniques,Collection,"AWS, Azure, GCP","AWS CloudTrail logs, Azure activity logs, Stackdriver logs",User
+Data from Configuration Repository,T1602,2 sub-techniques,Collection,Network,"Netflow/Enclave netflow, Network protocol analysis, Packet capture",Administrator
+Data from Information Repositories,T1213,2 sub-techniques,Collection,"Linux, Office 365, SaaS, Windows, macOS","Application logs, Authentication logs, Data loss prevention, OAuth audit logs, Third-party application logs",User
+Data from Local System,T1005,No sub-techniques,Collection,"Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring",[]
+Data from Network Shared Drive,T1039,No sub-techniques,Collection,"Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring",[]
+Data from Removable Media,T1025,No sub-techniques,Collection,"Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring",[]
+Data Staged,T1074,2 sub-techniques,Collection,"AWS, Azure, GCP, Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring",[]
+Email Collection,T1114,3 sub-techniques,Collection,"Office 365, Windows","Authentication logs, Email gateway, File monitoring, Mail server, Office 365 trace logs, Process monitoring, Process use of network",User
+Input Capture,T1056,4 sub-techniques,"Collection,CredentialAccess","Linux, Network, Windows, macOS","API monitoring, Binary file metadata, DLL monitoring, Kernel drivers, Loaded DLLs, PowerShell logs, Process command-line parameters, Process monitoring, User interface, Windows Registry, Windows event logs","Administrator, SYSTEM, User, root"
+Man in the Browser,T1185,No sub-techniques,Collection,Windows,"API monitoring, Authentication logs, Packet capture, Process monitoring","Administrator, SYSTEM"
+Man-in-the-Middle,T1557,2 sub-techniques,"CredentialAccess,Collection","Linux, Windows, macOS","File monitoring, Netflow/Enclave netflow, Packet capture",User
+Screen Capture,T1113,No sub-techniques,Collection,"Linux, Windows, macOS","API monitoring, File monitoring, Process monitoring",[]
+Video Capture,T1125,No sub-techniques,Collection,"Windows, macOS","API monitoring, File monitoring, Process monitoring",User
+Automated Exfiltration,T1020,1 sub-techniques,Exfiltration,"Linux, Network, Windows, macOS","File monitoring, Process monitoring, Process use of network",[]
+Data Transfer Size Limits,T1030,No sub-techniques,Exfiltration,"Linux, Windows, macOS","Netflow/Enclave netflow, Packet capture, Process monitoring, Process use of network",[]
+Exfiltration Over Alternative Protocol,T1048,3 sub-techniques,Exfiltration,"Linux, Windows, macOS","Netflow/Enclave netflow, Network protocol analysis, Packet capture, Process monitoring, Process use of network",[]
+Exfiltration Over C2 Channel,T1041,No sub-techniques,Exfiltration,"Linux, Windows, macOS","Netflow/Enclave netflow, Packet capture, Process monitoring, Process use of network",[]
+Exfiltration Over Other Network Medium,T1011,1 sub-techniques,Exfiltration,"Linux, Windows, macOS","Process monitoring, User interface",[]
+Exfiltration Over Physical Medium,T1052,1 sub-techniques,Exfiltration,"Linux, Windows, macOS","Data loss prevention, File monitoring, Process monitoring",[]
+Exfiltration Over Web Service,T1567,2 sub-techniques,Exfiltration,"Linux, Windows, macOS","Netflow/Enclave netflow, Network protocol analysis, Packet capture, Process monitoring, Process use of network, SSL/TLS inspection",[]
+Scheduled Transfer,T1029,No sub-techniques,Exfiltration,"Linux, Windows, macOS","Netflow/Enclave netflow, Process monitoring, Process use of network",[]
+Transfer Data to Cloud Account,T1537,No sub-techniques,Exfiltration,"AWS, Azure, GCP","AWS CloudTrail logs, Azure activity logs, Stackdriver logs",User
+Application Layer Protocol,T1071,4 sub-techniques,CommandAndControl,"Linux, Windows, macOS","DNS records, Netflow/Enclave netflow, Network protocol analysis, Packet capture, Process monitoring, Process use of network",[]
+Communication Through Removable Media,T1092,No sub-techniques,CommandAndControl,"Linux, Windows, macOS","Data loss prevention, File monitoring",[]
+Data Encoding,T1132,2 sub-techniques,CommandAndControl,"Linux, Windows, macOS","Network protocol analysis, Packet capture, Process monitoring, Process use of network",User
+Data Obfuscation,T1001,3 sub-techniques,CommandAndControl,"Linux, Windows, macOS","Network protocol analysis, Packet capture, Process monitoring, Process use of network",[]
+Dynamic Resolution,T1568,3 sub-techniques,CommandAndControl,"Linux, Windows, macOS","DNS records, SSL/TLS inspection, Web logs",User
+Encrypted Channel,T1573,2 sub-techniques,CommandAndControl,"Linux, Windows, macOS","Malware reverse engineering, Netflow/Enclave netflow, Packet capture, Process monitoring, Process use of network, SSL/TLS inspection",[]
+Fallback Channels,T1008,No sub-techniques,CommandAndControl,"Linux, Windows, macOS","Malware reverse engineering, Netflow/Enclave netflow, Packet capture, Process monitoring, Process use of network",[]
+Ingress Tool Transfer,T1105,No sub-techniques,CommandAndControl,"Linux, Windows, macOS","File monitoring, Netflow/Enclave netflow, Network protocol analysis, Packet capture, Process command-line parameters, Process monitoring, Process use of network",User
+Multi-Stage Channels,T1104,No sub-techniques,CommandAndControl,"Linux, Windows, macOS","Netflow/Enclave netflow, Network device logs, Network protocol analysis, Packet capture, Process use of network",[]
+Non-Application Layer Protocol,T1095,No sub-techniques,CommandAndControl,"Linux, Network, Windows, macOS","Host network interface, Netflow/Enclave netflow, Network intrusion detection system, Network protocol analysis, Packet capture, Process use of network",[]
+Non-Standard Port,T1571,No sub-techniques,CommandAndControl,"Linux, Windows, macOS","Netflow/Enclave netflow, Packet capture, Process monitoring, Process use of network",[]
+Protocol Tunneling,T1572,No sub-techniques,CommandAndControl,"Linux, Windows, macOS","Netflow/Enclave netflow, Network protocol analysis, Packet capture, Process monitoring, Process use of network",[]
+Proxy,T1090,4 sub-techniques,CommandAndControl,"Linux, Network, Windows, macOS","Netflow/Enclave netflow, Packet capture, Process monitoring, Process use of network, SSL/TLS inspection",[]
+Remote Access Software,T1219,No sub-techniques,CommandAndControl,"Linux, Windows, macOS","Network intrusion detection system, Network protocol analysis, Process monitoring, Process use of network",User
+Traffic Signaling,T1205,1 sub-techniques,"DefenseEvasion,Persistence,CommandAndControl","Linux, Network, Windows, macOS","Netflow/Enclave netflow, Packet capture",User
+Web Service,T1102,3 sub-techniques,CommandAndControl,"Linux, Windows, macOS","Host network interface, Netflow/Enclave netflow, Network protocol analysis, Packet capture, SSL/TLS inspection",User
+Account Access Removal,T1531,No sub-techniques,Impact,"Linux, Windows, macOS","Process command-line parameters, Process monitoring, Windows event logs","Administrator, SYSTEM, User, root"
+Data Destruction,T1485,No sub-techniques,Impact,"Linux, Windows, macOS","File monitoring, Process command-line parameters, Process monitoring","Administrator, SYSTEM, User, root"
+Data Encrypted for Impact,T1486,No sub-techniques,Impact,"Linux, Windows, macOS","File monitoring, Kernel drivers, Process command-line parameters, Process monitoring","Administrator, SYSTEM, User, root"
+Data Manipulation,T1565,3 sub-techniques,Impact,"Linux, Windows, macOS","Application logs, File monitoring, Network protocol analysis, Packet capture","Administrator, SYSTEM, User, root"
+Defacement,T1491,2 sub-techniques,Impact,"AWS, Azure, GCP, Linux, Windows, macOS","Packet capture, Packet capture, Web application firewall logs, Web logs",[]
+Disk Wipe,T1561,2 sub-techniques,Impact,"Linux, Windows, macOS","Kernel drivers, Process command-line parameters, Process monitoring","Administrator, SYSTEM, User, root"
+Endpoint Denial of Service,T1499,4 sub-techniques,Impact,"AWS, Azure, Azure AD, GCP, Linux, Office 365, SaaS, Windows, macOS","Netflow/Enclave netflow, Network device logs, Network intrusion detection system, Network protocol analysis, SSL/TLS inspection, Web application firewall logs, Web logs",[]
+Firmware Corruption,T1495,No sub-techniques,Impact,"Linux, Windows, macOS","BIOS, Component firmware","Administrator, SYSTEM, root"
+Inhibit System Recovery,T1490,No sub-techniques,Impact,"Linux, Windows, macOS","Process command-line parameters, Process monitoring, Services, Windows Registry, Windows event logs","Administrator, SYSTEM, User, root"
+Network Denial of Service,T1498,2 sub-techniques,Impact,"AWS, Azure, Azure AD, GCP, Linux, Office 365, SaaS, Windows, macOS","Netflow/Enclave netflow, Network device logs, Network intrusion detection system, Network protocol analysis, Sensor health and status",[]
+Resource Hijacking,T1496,No sub-techniques,Impact,"AWS, Azure, GCP, Linux, Windows, macOS","AWS CloudTrail logs, Azure activity logs, Network device logs, Network protocol analysis, Process monitoring, Process use of network, Stackdriver logs","Administrator, User"
+Service Stop,T1489,No sub-techniques,Impact,"Linux, Windows, macOS","API monitoring, File monitoring, Process command-line parameters, Process monitoring, Windows Registry","Administrator, SYSTEM, User"
+System Shutdown/Reboot,T1529,No sub-techniques,Impact,"Linux, Windows, macOS","Process command-line parameters, Process monitoring, Windows event logs","Administrator, SYSTEM, User, root"
