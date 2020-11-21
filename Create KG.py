@@ -10,7 +10,7 @@ matcher = NodeMatcher(g)
 def create_KG():
     g.delete_all()
     i = 0
-    with open('G:/Programming files/python/code/KG/KG-NS/ATT&CK MATRICES Tac.csv', 'r') as f1:
+    with open('//ATT&CK MATRICES Tac.csv', 'r') as f1:
         Tactics_info_list = csv.reader(f1)
         for tac in Tactics_info_list:
             if Tactics_info_list.line_num == 1:
@@ -30,7 +30,7 @@ def create_KG():
             else:
                 cur_node = Tactics_node
 
-    with open('G:/Programming files/python/code/KG/KG-NS/ATT&CK MATRICES Tec.csv', 'r') as f2:
+    with open('//ATT&CK MATRICES Tec.csv', 'r') as f2:
         Techniques_info_list = csv.reader(f2)
         for tec in Techniques_info_list:
             if Techniques_info_list.line_num == 1:
@@ -54,7 +54,7 @@ def create_KG():
                         relation2 = Relationship(Techniques_node, 'Technique', Tempnode)
                         g.create(relation2)
 
-    with open('G:/Programming files/python/code/KG/KG-NS/ATT&CK MATRICES Miti.csv', 'r') as f3:
+    with open('//ATT&CK MATRICES Miti.csv', 'r') as f3:
         Mitigations_info_list = csv.reader(f3)
         for miti in Mitigations_info_list:
             if Mitigations_info_list.line_num == 1:
