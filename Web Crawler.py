@@ -5,11 +5,17 @@ import csv
 
 # 初始化列表，存入爬虫数据
 Tactics_info_list = []
+
 Techniques_info_list = []
 Techniques_url = []
+
 Mitigations_info_list = []
 Mitigations_info_list_temp = []
 Mitigations_url = []
+
+Groups_info_list = []
+Groups_info_list_temp = []
+Groups_url = []
 
 
 # 定义获取tactics相关信息的函数
@@ -98,6 +104,36 @@ def get_mitigations_info(url):
     Mitigations_info_list_temp.append(Tec_Addressed_by_Mitigation)
 
 
+# 定义获取groups的url的函数
+def get_groups_url():
+    headers = {
+        'User-Agent': 'user-agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'}
+    html = requests.get('https://attack.mitre.org/groups/', headers=headers)
+    selector = etree.HTML(html.text)
+    # 获取Mitigations基本信息
+    Associated_Groups = selector.xpath('//table[@class="table table-bordered table-alternate mt-2"]/tbody/tr/td[2]/text()')
+    for group in Associated_Groups:
+        Groups_info_list_temp.append(group.strip())
+    Group_ID = selector.xpath('//table[@class="table table-bordered table-alternate mt-2"]/tbody/tr/td[1]/a/@href')
+    for ID in Group_ID:
+        Groups_url.append('https://attack.mitre.org{}/'.format(str(ID)))
+
+
+# 定义获取Groups相关信息的函数
+def get_groups_info(url):
+    headers = {
+        'User-Agent': 'user-agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'}
+    html = requests.get(url, headers=headers)
+    selector = etree.HTML(html.text)
+    # 获取Group使用的技术ID
+    Tecs_Used_by_Group = selector.xpath(
+        '//table[@class="table techniques-used table-bordered mt-2"]/tbody/tr/td[2]/a/text()')
+    Group_Name =selector.xpath('//div[@class="container-fluid"]/h1/text()')
+    Group_ID =selector.xpath('//div[@class="card-body"]/div[1]/text()')
+    info_list = [Group_Name[0].strip(), Group_ID[0].replace(':', '').replace(' ', ''), Tecs_Used_by_Group]
+    Groups_info_list.append(info_list)
+
+
 # 定义获取Tactics网页数据的函数
 def get_urls1():
     urls = ['https://attack.mitre.org/tactics/TA000{}/'.format(str(i)) for i in range(1, 10)]
@@ -126,34 +162,52 @@ def get_urls3():
         Mitigations_info_list[i].append(Mitigations_info_list_temp[i])
 
 
+# 定义获取Groups网页数据的函数
+def get_urls4():
+    get_groups_url()
+    for url in Groups_url:
+        get_groups_info(url)
+        time.sleep(0.05)
+    # 合并两个列表
+    for i in range(0, len(Groups_info_list_temp)):
+        Groups_info_list[i].append(Groups_info_list_temp[i])
+
 # 程序主入口
 if __name__ == '__main__':
     # get_urls1()
     # get_urls2()
-    get_urls3()
+    # get_urls3()
+    get_urls4()
     # 定义表头
     # header1 = ['Name', 'Intro', 'ID', 'Created', 'Last_Modified']
     # header2 = ['Name', 'ID', 'Sub-Tec', 'Tactic', 'Platforms', 'Data Sources', 'Permissions Required']
-    header3 = ['Name', 'ID', 'Description', 'Tecs Addressed by Mitigation']
+    # header3 = ['Name', 'ID', 'Description', 'Tecs Addressed by Mitigation']
+    header4 = ['Name', 'ID', 'Tecs Used by Group', 'Associated Groups']
     # 创建工作簿
     # csvfile1 = open('ATT&CK MATRICES Tac.csv', 'w', errors='ignore', newline='')
     # csvfile2 = open('ATT&CK MATRICES Tec.csv', 'w', errors='ignore', newline='')
-    csvfile3 = open('ATT&CK MATRICES Miti.csv', 'w', errors='ignore', newline='')
+    # csvfile3 = open('ATT&CK MATRICES Miti.csv', 'w', errors='ignore', newline='')
+    csvfile4 = open('ATT&CK MATRICES Group.csv', 'w', errors='ignore', newline='')
     # sheet1 = csv.writer(csvfile1)
     # sheet2 = csv.writer(csvfile2)
-    sheet3 = csv.writer(csvfile3)
+    # sheet3 = csv.writer(csvfile3)
+    sheet4 = csv.writer(csvfile4)
     # 写入表头
     # sheet1.writerow(header1)
     # sheet2.writerow(header2)
-    sheet3.writerow(header3)
+    # sheet3.writerow(header3)
+    sheet4.writerow(header4)
     # 写入爬虫数据
     # for list1 in Tactics_info_list:
     #     sheet1.writerow(list1)
     # for list2 in Techniques_info_list:
     #     sheet2.writerow(list2)
-    for list3 in Mitigations_info_list:
-        sheet3.writerow(list3)
+    # for list3 in Mitigations_info_list:
+    #     sheet3.writerow(list3)
+    for list4 in Groups_info_list:
+        sheet4.writerow(list4)
     # 保存文件
     # csvfile1.close()
     # csvfile2.close()
-    csvfile3.close()
+    # csvfile3.close()
+    csvfile4.close()
